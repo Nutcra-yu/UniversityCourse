@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string.h>
+#include <malloc.h>
+
+using namespace std;
+
+class String
+{
+private:
+    string a;
+    int len;
+
+public:
+    String(string a)
+
+};
+
+int main()
+{
+    String S1("hello");
+
+    S1.Show();
+
+    cout << endl;
+    system("pause");
+}
