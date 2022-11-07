@@ -32,6 +32,8 @@ int main()
 	A.setCtriangle(3,3,3);
 	A.showPerimeter();
 	A.showArea(); 
+
+	system("pause");
 }
 
 
