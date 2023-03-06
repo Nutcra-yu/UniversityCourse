@@ -127,7 +127,7 @@ BinTree Insert(BinTree BST, ElementType X)
 BinTree Delete(BinTree BST, ElementType X)
 {
     //找不到
-    if (Find(BSt, X) == NULL)
+    if (Find(BST, X) == NULL)
     {
         printf("Not Found\n");
         return BST;
@@ -135,7 +135,7 @@ BinTree Delete(BinTree BST, ElementType X)
     //找到
     else
     {
-        if (xPosition->Left != NULL)
+        if (X.Position->Left != NULL)
         {
         }
     }
