@@ -1,4 +1,4 @@
-	/*查询基础*/
+/*查询基础*/
 use SQLBasicCourse;
 
 --查询特定列

@@ -1,15 +1,15 @@
 use SQLBasicCourse;
 
 -- 建表
-create table product
+CREATE TABLE Product
 (
-product_id		int			not null,
-product_name	varchar(20) not null,
-product_type	varchar(20),
-sale_price		int			not null,
-purchase_sale	int			not null,
-register_date	date,
-primary key (product_id)
+product_id CHAR(4) NOT NULL,
+product_name VARCHAR(100) NOT NULL,
+product_type VARCHAR(32) NOT NULL,
+sale_price INTEGER ,
+purchase_price INTEGER ,
+regist_date DATE ,
+PRIMARY KEY (product_id)
 );
 
 -- 删表
@@ -30,26 +30,23 @@ alter table product drop column product_id
 
 
 -- 插入数据
-begin transaction;
+INSERT INTO Product VALUES 
+('0001', 'T恤衫', '衣服', 1000, 500, '2009-09-20');
+INSERT INTO Product VALUES 
+('0002', '打孔器', '办公用品', 500, 320, '2009-09-11');
+INSERT INTO Product VALUES 
+('0003', '运动T恤', '衣服', 4000, 2800, NULL);
+INSERT INTO Product VALUES 
+('0004', '菜刀', '厨房用具', 3000, 2800, '2009-09-20');
+INSERT INTO Product VALUES 
+('0005', '高压锅', '厨房用具', 6800, 5000, '2009-01-15');
+INSERT INTO Product VALUES 
+('0006', '叉子', '厨房用具', 500, NULL, '2009-09-20');
+INSERT INTO Product VALUES 
+('0007', '擦菜板', '厨房用具', 880, 790, '2008-04-28');
+INSERT INTO Product VALUES 
+('0008', '圆珠笔', '办公用品', 100, NULL,'2009-11-11');
 
-insert into product values 
-	(001,'T-shirt','cloth',1000,500,'2023-09-20');
-insert into product values
-	(002,'puncher','office supplies',500,320,'2023-09-11');
-insert into product values
-	(003,'short T-shirt','cloth',4000,2800,null);
-insert into product values
-	(004,'kitchen knife','kitchenware',3000,2800,'2023-09-20');
-insert into product values
-	(005,'prseeure cooker','kitchenware',6800,5000,'2023-01-15');
-insert into product values
-	(006,'fork','kitchenware',500,400,'2023-09-2');
-insert into product values
-	(007,'rasp','kitchenware',880,790,'2022-04-28');
-insert into product values
-	(008,'ball-point-pencile','office supplies',100,50,'2023-11-11')
-
-commit;
 
 -- 修改列名
 exec sp_rename 'product.purchase_sale','purchase_price','column'
